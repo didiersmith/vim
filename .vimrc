@@ -10,7 +10,7 @@ au BufRead,BufNewFile *.go set filetype=go
 
 " Ignore compiled files
 set wildmenu
-set wildignore=*.o,*~,*.pyc,*.d
+set wildignore=*.o,*~,*.pyc,*.d,*.mp3,*.avi,*.mpg,*.gif,*.png,*.dll,*.jpg,*.exe,*.pdf,*.class,*.jar,*.zip,*.mp4,*.wmv,*.flv,*.ico
 
 "Always show current position
 set ruler
@@ -75,3 +75,15 @@ imap <c-t> <c-x><c-u>
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%>80v.\+/
+
+execute pathogen#infect()
+
+" ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+" Make ctrlp set its local working directory according to the nearest ancestor
+" with a .git etc file.
+" let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
