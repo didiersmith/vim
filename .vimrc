@@ -88,5 +88,18 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " nerdtree
-:nmap \a :NERDTreeToggle<CR>
+nmap <Leader>a :NERDTreeToggle<CR>
+
+
+" Syntastic
+set statusline+=%{SyntasticStatuslineFlag()}
+let g:syntastic_check_on_open=1
+nmap <Leader>o :lnext<cr>
+nmap <Leader>u :lprev<cr>
+nmap <Leader>e :Errors<cr>
+let g:syntastic_auto_loc_list=1
+
+
+" closetag
+source ~/.vim/bundle/closetag/closetag.vim
 
