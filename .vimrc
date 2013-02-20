@@ -87,3 +87,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 " let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+" nerdtree
+:nmap \a :NERDTreeToggle<CR>
+
